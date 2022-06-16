@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HR.LeaveManagement.Application.Features.LeaveRequests.Requests.Queries
 {
-    public class LeaveRequestList : IRequest<List<LeaveRequestDto>>
+    public class LeaveRequestList : IRequest<List<LeaveRequestListDto>>
     {
     }
 }

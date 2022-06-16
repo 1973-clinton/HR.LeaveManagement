@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace HR.LeaveManagement.Application.Features.LeaveAllocation.Requests.Queries
+namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Queries
 {
     public class LeaveAllocationListRequest : IRequest<List<LeaveAllocationDto>>
     {
