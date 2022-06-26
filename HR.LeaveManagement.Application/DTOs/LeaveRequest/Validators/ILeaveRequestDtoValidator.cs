@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HR.LeaveManagement.Application.DTOs.LeaveRequest.Validators
 {
-    public class ILeaveRequestDtoValidator : AbstractValidator<CreateLeaveRequestDto>
+    public class ILeaveRequestDtoValidator : AbstractValidator<ILeaveRequestDto>
     {
         ILeaveRequestRepository _leaveRequestRepository;
         public ILeaveRequestDtoValidator(ILeaveRequestRepository leaveRequestRepository)
