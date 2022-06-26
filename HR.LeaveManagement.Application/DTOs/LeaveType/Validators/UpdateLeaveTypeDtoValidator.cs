@@ -5,11 +5,14 @@ using System.Text;
 
 namespace HR.LeaveManagement.Application.DTOs.LeaveType.Validators
 {
-    public class CreateLeaveTypeDtoValidator : AbstractValidator<CreateLeaveTypeDto>
+    public class UpdateLeaveTypeDtoValidator : AbstractValidator<LeaveTypeDto>
     {
-        public CreateLeaveTypeDtoValidator()
+        public UpdateLeaveTypeDtoValidator()
         {
             Include(new ILeaveTypeDtoValidator());
+
+            RuleFor(p => p.Id)
+                .NotNull().WithMessage("{PropertyValue} must not be null");                
         }
     }
 }
