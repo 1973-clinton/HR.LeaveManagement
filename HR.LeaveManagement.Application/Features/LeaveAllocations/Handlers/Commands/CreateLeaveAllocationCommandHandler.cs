@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HR.LeaveManagement.Application.DTOs.LeaveAllocation.Validators;
 using HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Commands;
 using HR.LeaveManagement.Application.Persistence.Contracts;
 using HR.LeaveManagement.Domain;
@@ -15,11 +16,10 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Handlers.Comm
     {
         private readonly IMapper _mapper;
         private readonly ILeaveAllocationRepository _leaveAllocationRepository;
-
         public CreateLeaveAllocationCommandHandler(ILeaveAllocationRepository leaveAllocationRepository, IMapper mapper)
         {
             _leaveAllocationRepository = leaveAllocationRepository;
-            this._mapper = mapper;
+            _mapper = mapper;
         }
         public async Task<int> Handle(CreateLeaveAllocationCommand request, CancellationToken cancellationToken)
         {
