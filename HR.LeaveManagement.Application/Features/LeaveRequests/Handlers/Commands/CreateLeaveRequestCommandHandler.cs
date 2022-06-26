@@ -22,6 +22,7 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Command
         }
         public async Task<int> Handle(CreateLeaveRequestCommand request, CancellationToken cancellationToken)
         {
+            //perform validations
             var validator = new CreateLeaveRequestDtoValidator(_leaveRequestRepository);
             var results = await validator.ValidateAsync(request.LeaveRequest);
             if (results.IsValid == false)

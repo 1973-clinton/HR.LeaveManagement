@@ -5,6 +5,6 @@ namespace HR.LeaveManagement.Application.Features.LeaveAllocations.Requests.Comm
 {
     public class CreateLeaveAllocationCommand : IRequest<int>
     {
-        public LeaveAllocationDto LeaveAllocation { get; set; }
+        public CreateLeaveAllocationDto LeaveAllocation { get; set; }
     }
 }
