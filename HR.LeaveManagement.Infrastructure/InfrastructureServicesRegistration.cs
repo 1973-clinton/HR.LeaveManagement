@@ -9,12 +9,14 @@ using System.Text;
 
 namespace HR.LeaveManagement.Infrastructure
 {
-    public class InfrastructureServicesRegistration
+    public static class InfrastructureServicesRegistration
     {
-        public InfrastructureServicesRegistration(IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection ConfigureInfrastructureServices(this IServiceCollection services, IConfiguration configuration) 
         {
             services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
             services.AddTransient<IEmailSender, EmailSender>();
+
+            return services;
         }
     }
 }
